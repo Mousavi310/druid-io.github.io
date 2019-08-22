@@ -152,7 +152,7 @@ indexing task is not a realtime task, it exits immediately.
 
 And like this on the Coordinator / Historical side:
 
-1. The Coordinator polls the metadata store periodically (by default, every 1 minute) for newly published segments.
+1. The Coordinator pulls the metadata store periodically (by default, every 1 minute) for newly published segments.
 2. When the Coordinator finds a segment that is published and used, but unavailable, it chooses a Historical process
 to load that segment and instructs that Historical to do so.
 3. The Historical loads the segment and begins serving it.
